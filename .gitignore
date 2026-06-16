@@ -1,0 +1,194 @@
+# =========================
+
+# Dependencies
+
+# =========================
+
+node_modules/
+**/node_modules/
+
+# =========================
+
+# Environment Variables
+
+# =========================
+
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+backend/.env
+frontend/.env
+
+# =========================
+
+# Logs
+
+# =========================
+
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# =========================
+
+# Runtime Data
+
+# =========================
+
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# =========================
+
+# Coverage
+
+# =========================
+
+coverage/
+.nyc_output/
+
+# =========================
+
+# Build Output
+
+# =========================
+
+dist/
+build/
+out/
+
+frontend/dist/
+backend/dist/
+
+# =========================
+
+# Cache
+
+# =========================
+
+.cache/
+.parcel-cache/
+.vite/
+.eslintcache
+
+# =========================
+
+# OS Files
+
+# =========================
+
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# =========================
+
+# IDE Files
+
+# =========================
+
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# =========================
+
+# MongoDB
+
+# =========================
+
+mongodb-data/
+dump/
+
+# =========================
+
+# Temporary Files
+
+# =========================
+
+tmp/
+temp/
+*.tmp
+
+# =========================
+
+# Uploads
+
+# =========================
+
+uploads/
+public/uploads/
+
+# =========================
+
+# Testing
+
+# =========================
+
+jest-report/
+test-results/
+
+# =========================
+
+# Docker
+
+# =========================
+
+docker-data/
+*.tar
+
+# =========================
+
+# Secrets
+
+# =========================
+
+secrets/
+keys/
+*.pem
+*.key
+*.crt
+
+# =========================
+
+# AI & Vector DB
+
+# =========================
+
+vector-store/
+embeddings/
+pinecone-cache/
+rag-cache/
+
+# =========================
+
+# Generated Reports
+
+# =========================
+
+reports/generated/
+exports/
+
+# =========================
+
+# Misc
+
+# =========================
+
+*.swp
+*.swo
+*~
