@@ -26,7 +26,7 @@ const app = express();
 app.use(
   cors({
     origin: [
-      "https://geo-strategist-ai-wfkw.vercel.app/"
+      "https://geo-strategist-ai-wfkw.vercel.app"
     ],
     credentials: true,
   })
