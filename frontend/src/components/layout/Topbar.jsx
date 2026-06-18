@@ -222,17 +222,18 @@ export default function Topbar() {
         </nav>
 
         {/* Right Side */}
-
         <div
-          className="
-          ml-auto
+  className="
+  ml-auto
 
-          flex
-          items-center
+  hidden
+  lg:flex
 
-          gap-3
-          "
-        >
+  items-center
+
+  gap-3
+  "
+>
           {!token ? (
             <>
               <Link
