@@ -1,4 +1,5 @@
 import Topbar from "../components/layout/Topbar";
+import MobileNav from "../components/layout/MobileNav";
 import { useLocation } from "react-router-dom";
 
 export default function AppLayout({
@@ -27,7 +28,7 @@ export default function AppLayout({
         inset-0
         pointer-events-none
         bg-[radial-gradient(circle_at_top,rgba(34,211,238,0.08),transparent_55%)]
-      "
+        "
       />
 
       <div
@@ -38,12 +39,20 @@ export default function AppLayout({
         flex-col
         "
       >
-        <Topbar />
+        {/* Mobile Navigation */}
+        <MobileNav />
+
+        {/* Desktop Navigation */}
+        <div className="hidden lg:block">
+          <Topbar />
+        </div>
 
         <main
           className="
           flex-1
           w-full
+          pt-16
+          lg:pt-0
           "
         >
           {isChatPage ? (
