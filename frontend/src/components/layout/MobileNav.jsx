@@ -1,10 +1,26 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import useAuthStore from "../../store/authStore";
 
 export default function MobileNav() {
   const [open, setOpen] = useState(false);
 
   const location = useLocation();
+
+  const user =
+    useAuthStore(
+      (state) => state.user
+    );
+
+  const token =
+    useAuthStore(
+      (state) => state.token
+    );
+
+  const logout =
+    useAuthStore(
+      (state) => state.logout
+    );
 
   const links = [
     {
@@ -48,7 +64,6 @@ export default function MobileNav() {
         border-b
         border-[#3C494E]
 
-      
         items-center
         justify-between
 
@@ -62,9 +77,10 @@ export default function MobileNav() {
           text-cyan-300
           font-semibold
           tracking-wide
+          text-sm
           "
         >
-          GSAI
+          GeoStrategist AI
         </h2>
 
         <button
@@ -88,9 +104,7 @@ export default function MobileNav() {
             className="
             fixed
             inset-0
-
             bg-black/60
-
             z-40
             "
             onClick={() =>
@@ -103,7 +117,6 @@ export default function MobileNav() {
           <div
             className="
             fixed
-
             top-0
             left-0
 
@@ -120,13 +133,14 @@ export default function MobileNav() {
             p-6
             "
           >
+            {/* Header */}
+
             <div
               className="
               flex
               justify-between
               items-center
-
-              mb-8
+              mb-6
               "
             >
               <h2
@@ -152,6 +166,43 @@ export default function MobileNav() {
               </button>
             </div>
 
+            {/* User Section */}
+
+            {token && (
+              <div
+                className="
+                mb-6
+                p-4
+
+                rounded-xl
+
+                bg-[#1E293B]
+
+                border
+                border-cyan-500/20
+                "
+              >
+                <p
+                  className="
+                  text-cyan-300
+                  font-semibold
+                  "
+                >
+                  {user?.name}
+                </p>
+
+                <p
+                  className="
+                  text-slate-400
+                  text-sm
+                  break-all
+                  "
+                >
+                  {user?.email}
+                </p>
+              </div>
+            )}
+
             {/* Navigation */}
 
             <nav
@@ -174,9 +225,7 @@ export default function MobileNav() {
                         link.path
                       }
                       onClick={() =>
-                        setOpen(
-                          false
-                        )
+                        setOpen(false)
                       }
                       className={`
                         block
@@ -204,75 +253,102 @@ export default function MobileNav() {
               )}
             </nav>
 
-            {/* Auth Buttons */}
+            {/* Bottom Auth Section */}
 
             <div
               className="
-              mt-8
-
-              border-t
-              border-[#3C494E]
-
-              pt-6
-
-              space-y-3
+              absolute
+              bottom-6
+              left-6
+              right-6
               "
             >
-              <Link
-                to="/login"
-                onClick={() =>
-                  setOpen(false)
-                }
-                className="
-                block
+              {!token ? (
+                <div className="space-y-3">
 
-                text-center
+                  <Link
+                    to="/login"
+                    onClick={() =>
+                      setOpen(false)
+                    }
+                    className="
+                    block
 
-                bg-cyan-500
+                    text-center
 
-                text-black
-                font-semibold
+                    bg-cyan-500
 
-                py-3
+                    text-black
+                    font-semibold
 
-                rounded-lg
+                    py-3
 
-                hover:bg-cyan-400
+                    rounded-lg
 
-                transition
-                "
-              >
-                Login
-              </Link>
+                    hover:bg-cyan-400
 
-              <Link
-                to="/register"
-                onClick={() =>
-                  setOpen(false)
-                }
-                className="
-                block
+                    transition
+                    "
+                  >
+                    Login
+                  </Link>
 
-                text-center
+                  <Link
+                    to="/register"
+                    onClick={() =>
+                      setOpen(false)
+                    }
+                    className="
+                    block
 
-                border
-                border-cyan-300
+                    text-center
 
-                text-cyan-300
-                font-semibold
+                    border
+                    border-cyan-300
 
-                py-3
+                    text-cyan-300
+                    font-semibold
 
-                rounded-lg
+                    py-3
 
-                hover:bg-cyan-400
-                hover:text-black
+                    rounded-lg
 
-                transition
-                "
-              >
-                Sign Up
-              </Link>
+                    hover:bg-cyan-400
+                    hover:text-black
+
+                    transition
+                    "
+                  >
+                    Sign Up
+                  </Link>
+
+                </div>
+              ) : (
+                <button
+                  onClick={() => {
+                    logout();
+                    setOpen(false);
+                  }}
+                  className="
+                  w-full
+
+                  py-3
+
+                  rounded-lg
+
+                  bg-red-500
+
+                  text-white
+                  font-semibold
+
+                  hover:bg-red-600
+
+                  transition
+                  "
+                >
+                  Logout
+                </button>
+              )}
             </div>
           </div>
         </>
