@@ -35,7 +35,7 @@ export default function MobileNav() {
 
       <div
         className="
-        lg:hidden
+        flex lg:hidden
         fixed
         top-0
         left-0
@@ -48,7 +48,7 @@ export default function MobileNav() {
         border-b
         border-[#3C494E]
 
-        flex
+      
         items-center
         justify-between
 

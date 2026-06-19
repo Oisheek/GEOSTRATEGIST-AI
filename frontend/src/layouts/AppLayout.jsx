@@ -2,15 +2,11 @@ import Topbar from "../components/layout/Topbar";
 import MobileNav from "../components/layout/MobileNav";
 import { useLocation } from "react-router-dom";
 
-export default function AppLayout({
-  children,
-}) {
-  const location =
-    useLocation();
+export default function AppLayout({ children }) {
+  const location = useLocation();
 
   const isChatPage =
-    location.pathname ===
-    "/chat";
+    location.pathname === "/chat";
 
   return (
     <div
@@ -40,7 +36,9 @@ export default function AppLayout({
         "
       >
         {/* Mobile Navigation */}
-        <MobileNav />
+        <div className="block lg:hidden">
+          <MobileNav />
+        </div>
 
         {/* Desktop Navigation */}
         <div className="hidden lg:block">
@@ -62,11 +60,9 @@ export default function AppLayout({
               className="
               max-w-[1700px]
               mx-auto
-
               px-4
               md:px-6
               lg:px-8
-
               pb-10
               "
             >

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import AppRoutes from "./routes/AppRoutes";
 import IntroLoader from "./components/ui/IntroLoader";
-import MobileNav from "./components/MobileNav";
+
 
 function App() {
   const [showIntro, setShowIntro] =
