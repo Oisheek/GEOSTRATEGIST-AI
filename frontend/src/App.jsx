@@ -2,7 +2,6 @@ import { useState } from "react";
 import AppRoutes from "./routes/AppRoutes";
 import IntroLoader from "./components/ui/IntroLoader";
 
-
 function App() {
   const [showIntro, setShowIntro] =
     useState(
@@ -23,12 +22,7 @@ function App() {
     );
   }
 
-  return (
-    <>
-      <MobileNav />
-      <AppRoutes />
-    </>
-  );
+  return <AppRoutes />;
 }
 
 export default App;
