@@ -32,7 +32,7 @@ async function callModel(prompt) {
         await client.chat.send({
           chatRequest: {
             model:
-              "openai/gpt-oss-120b:free",
+            "nvidia/nemotron-3-ultra-550b-a55b:free",
             messages: [
               {
                 role: "user",

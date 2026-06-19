@@ -53,7 +53,7 @@ Rules:
         "https://openrouter.ai/api/v1/chat/completions",
         {
           model:
-            "openai/gpt-oss-120b:free",
+          "nvidia/nemotron-3-ultra-550b-a55b:free",
 
           messages: [
             {
