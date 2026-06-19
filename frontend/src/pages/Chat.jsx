@@ -3,7 +3,7 @@ import { useState } from "react";
 import ChatSidebar from "../components/chat/ChatSidebar";
 import ChatWindow from "../components/chat/ChatWindow";
 import ChatInput from "../components/chat/ChatInput";
-
+import { ChevronRight } from "lucide-react";
 export default function Chat() {
   const [sidebarOpen, setSidebarOpen] =
     useState(false);
@@ -36,12 +36,15 @@ export default function Chat() {
           bg-cyan-500
           text-black
 
-          px-3
-          py-2
+            w-10
+  h-10
 
-          rounded-lg
-          font-bold
-          "
+  rounded-lg
+
+  flex
+  items-center
+  justify-center
+  "
         >
           ☰
         </button>
