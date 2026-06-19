@@ -126,7 +126,7 @@ export default function ChatSidebar() {
       <div
         style={{
           padding:
-            "20px 16px 12px",
+            "32px 16px 12px",
 
           borderBottom:
             "1px solid #1e2a45",

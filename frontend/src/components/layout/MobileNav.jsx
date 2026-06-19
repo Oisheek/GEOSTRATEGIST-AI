@@ -261,9 +261,11 @@ export default function MobileNav() {
 
             <div
   className="
+  mt-auto
   pt-4
   border-t
   border-[#3C494E]
+  mb-8
   "
 >
               {!token ? (
