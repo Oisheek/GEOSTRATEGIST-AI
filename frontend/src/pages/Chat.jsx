@@ -18,33 +18,37 @@ export default function Chat() {
       }}
     >
       {/* Mobile Hamburger */}
-      <button
-        onClick={() =>
-          setSidebarOpen(true)
-        }
-        className="
-        md:hidden
 
-        fixed
-        top-20
-        left-4
+      {!sidebarOpen && (
+        <button
+          onClick={() =>
+            setSidebarOpen(true)
+          }
+          className="
+          md:hidden
 
-        z-50
+          fixed
+          top-20
+          left-4
 
-        bg-cyan-500
-        text-black
+          z-20
 
-        px-3
-        py-2
+          bg-cyan-500
+          text-black
 
-        rounded-lg
-        font-bold
-        "
-      >
-        ☰
-      </button>
+          px-3
+          py-2
+
+          rounded-lg
+          font-bold
+          "
+        >
+          ☰
+        </button>
+      )}
 
       {/* Mobile Overlay */}
+
       {sidebarOpen && (
         <div
           className="
@@ -64,31 +68,32 @@ export default function Chat() {
       )}
 
       {/* Sidebar */}
+
       <div
-  className={`
-  fixed
-  md:relative
+        className={`
+        fixed
+        md:relative
 
-  top-0
-  left-0
+        top-0
+        left-0
 
-  w-screen
-  md:w-auto
+        w-screen
+        md:w-auto
 
-  h-screen
+        h-screen
 
-  z-50
+        z-50
 
-  transition-transform
-  duration-300
+        transition-transform
+        duration-300
 
-  ${
-    sidebarOpen
-      ? "translate-x-0"
-      : "-translate-x-full md:translate-x-0"
-  }
-  `}
->
+        ${
+          sidebarOpen
+            ? "translate-x-0"
+            : "-translate-x-full md:translate-x-0"
+        }
+        `}
+      >
         <div className="relative h-full">
           <button
             onClick={() =>
@@ -115,6 +120,7 @@ export default function Chat() {
       </div>
 
       {/* Chat Area */}
+
       <div
         style={{
           flex: 1,

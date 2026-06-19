@@ -207,7 +207,13 @@ export default function MobileNav() {
             )}
 
             {/* Navigation */}
-            <nav className="space-y-2 flex-1">
+            <nav
+  className="
+  space-y-2
+  flex-1
+  overflow-y-auto
+  "
+>
               {links.map(
                 (link) => {
                   const isActive =
@@ -255,7 +261,9 @@ export default function MobileNav() {
 
             <div
   className="
-  mt-10
+  pt-4
+  border-t
+  border-[#3C494E]
   "
 >
               {!token ? (
