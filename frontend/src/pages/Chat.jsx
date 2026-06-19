@@ -46,7 +46,7 @@ export default function Chat() {
   justify-center
   "
         >
-          ☰
+           <ChevronRight size={22} />
         </button>
       )}
 
