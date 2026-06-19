@@ -95,15 +95,15 @@ export default function ChatSidebar() {
   return (
     <div
     style={{
-      width:
-        window.innerWidth < 768
-          ? "100vw"
-          : "260px",
-    
-      minWidth:
-        window.innerWidth < 768
-          ? "100vw"
-          : "260px",
+  minWidth:
+    window.innerWidth < 768
+      ? "60vw"
+      : "260px",
+  
+  maxWidth:
+    window.innerWidth < 768
+      ? "320px"
+      : "260px",
     
       height: "100vh",
     

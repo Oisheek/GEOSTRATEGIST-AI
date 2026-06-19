@@ -70,30 +70,31 @@ export default function Chat() {
       {/* Sidebar */}
 
       <div
-        className={`
-        fixed
-        md:relative
+  className={`
+  fixed
+  md:relative
 
-        top-0
-        left-0
+  top-0
+  left-0
 
-        w-screen
-        md:w-auto
+  w-[60vw]
+  max-w-[280px]
+  md:w-auto
 
-        h-screen
+  h-screen
 
-        z-50
+  z-50
 
-        transition-transform
-        duration-300
+  transition-transform
+  duration-300
 
-        ${
-          sidebarOpen
-            ? "translate-x-0"
-            : "-translate-x-full md:translate-x-0"
-        }
-        `}
-      >
+  ${
+    sidebarOpen
+      ? "translate-x-0"
+      : "-translate-x-full md:translate-x-0"
+  }
+  `}
+>
         <div className="relative h-full">
           <button
             onClick={() =>
