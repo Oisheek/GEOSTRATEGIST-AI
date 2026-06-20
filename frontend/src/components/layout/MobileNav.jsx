@@ -72,23 +72,16 @@ export default function MobileNav() {
         z-[9997]
         "
       >
-       <div className="flex items-center gap-2">
-  <img
-    src="/logo.png"
-    alt="GeoStrategist AI"
-    className="h-8 w-8"
-  />
-
-  <span
-    className="
-    text-cyan-300
-    font-semibold
-    text-sm
-    "
-  >
-    GeoStrategist AI
-  </span>
-</div>
+        <h2
+          className="
+          text-cyan-300
+          font-semibold
+          tracking-wide
+          text-sm
+          "
+        >
+          GeoStrategist AI
+        </h2>
 
         <button
           onClick={() =>

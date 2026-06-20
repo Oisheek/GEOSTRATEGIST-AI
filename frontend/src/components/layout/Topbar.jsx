@@ -120,40 +120,32 @@ export default function Topbar() {
           />
         </button>
 
-       <Link
+        <Link
   to="/"
   className="
   flex
-  items-center
-  gap-3
+  flex-col
 
   mr-10
   "
 >
-  <img
-    src="/logo.png"
-    alt="GeoStrategist AI"
-    className="
-    h-10
-    w-10
-    object-contain
-    "
-  />
-
   <span
     className="
-    text-sm
+    text-m
 
-    tracking-[0.25em]
+    tracking-[0.35em]
 
     uppercase
+    
 
     text-cyan-400
     "
   >
     GEOSTRATEGIST AI
   </span>
+
 </Link>
+
         {/* Navigation */}
 
         <nav
