@@ -120,7 +120,7 @@ export default function Topbar() {
           />
         </button>
 
-        <Link
+       <Link
   to="/"
   className="
   flex
@@ -134,8 +134,8 @@ export default function Topbar() {
     src="/logo.png"
     alt="GeoStrategist AI"
     className="
-    h-11
-    w-11
+    h-10
+    w-10
     object-contain
     "
   />
