@@ -349,6 +349,7 @@ const CONFLICT_COORDINATES = {
   "belarus-ukraine-tensions": { lat: 50, lng: 30 },
   "cyprus-dispute": { lat: 35.1, lng: 33.3 },
   "china-us-trade-tension": { lat: 39.9, lng: 116.4 },
+  "germany–belarus-border-tension": { lat: 54.5, lng: 25.7},
 };
 
 const REGION_COORDINATES = {
