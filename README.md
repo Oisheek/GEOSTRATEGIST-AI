@@ -449,7 +449,7 @@ https://geo-strategist-ai-wfkw.vercel.app/
 
 ## License
 
-Copyright © 2026 Oisheek Chattopadhyay Debjit Ghosh Amish Kumar Jha
+Copyright © 2026 Oisheek Chattopadhyay      Debjit Ghosh Amish      Kumar Jha
 
 All Rights Reserved.
 
@@ -461,6 +461,6 @@ without explicit permission from the author.
 
 ## Author
 
-**Oisheek Chattopadhyay**  **Debjit Ghosh**  **Amish Kumar Jha**
+**Oisheek Chattopadhyay**      **Debjit Ghosh**      **Amish Kumar Jha**
 
 GeoStrategist AI was developed as a modern geopolitical intelligence platform focused on real-time conflict monitoring, strategic risk assessment, and AI-powered geopolitical analysis.
